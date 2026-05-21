@@ -17,5 +17,5 @@
 
 ## 🧪 Testing & DevOps
 - What level of test coverage is expected (Unit, Integration, E2E)?
-- Are there specific environment variables or secrets involved?
+- What are the secret-handling requirements (e.g., storage, access controls) and policy constraints? (DO NOT share raw secret contents)
 - Should this be behind a feature flag?

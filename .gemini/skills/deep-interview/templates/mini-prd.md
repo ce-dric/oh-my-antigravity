@@ -17,6 +17,6 @@
 
 ## 4. Definition of Done (DoD)
 - [ ] Implementation complete.
-- [ ] Unit tests pass with >80% coverage.
+- [ ] Unit tests pass with coverage >= {PROJECT_TEST_COVERAGE_THRESHOLD} (per project standards).
 - [ ] Documentation updated.
 - [ ] Verified by the `verifier` agent.
