@@ -2,7 +2,7 @@
 
 ## 1. Layered Architecture
 - Files grouped by responsibility (e.g., `ui`, `domain`, `data`).
-- Direction of dependency should be outward-in (UI -> Domain <- Data).
+- Direction of dependency should be outward-in (UI → Domain ← Data).
 
 ## 2. Modular Architecture
 - Files grouped by feature (e.g., `auth`, `billing`, `users`).

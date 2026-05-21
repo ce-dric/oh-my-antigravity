@@ -2,7 +2,7 @@
 name: repo-mapper
 description: A specialized skill for advanced codebase analysis, dependency mapping, and structural visualization.
 orchestration:
-  manager: ralph
+  manager: Ralph
 ---
 
 # Skill: Repo-Mapper
