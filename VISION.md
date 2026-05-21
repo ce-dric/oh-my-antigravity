@@ -1,5 +1,11 @@
 # VISION.md - oh-my-gemini (OMG) Planning Document
 
+## 0. The OMC/OMX Mandate
+`oh-my-gemini` is committed to maintaining feature parity with `oh-my-claudecode` (OMC) and `oh-my-codex` (OMX).
+- **Rule:** If a feature exists in OMC or OMX, it must exist in OMG.
+- **Exceptions:** Any omission must be backed by a clear technical explanation (e.g., "Gemini CLI lacks X primitive").
+- **Innovation:** Modifications and additional features are encouraged as long as the base functionality is preserved.
+
 ## 1. Project Overview
 `oh-my-gemini` is an orchestration layer built on top of the Google Gemini CLI. It aims to implement the "Team-based" development model popularized by `oh-my-claudecode`, optimized for the Gemini ecosystem (Sub-agents and Skills).
 

@@ -2,14 +2,19 @@
 
 **Supercharge your Gemini CLI with a teams-first multi-agent orchestration layer.**
 
-Inspired by [oh-my-claudecode](https://github.com/yeachan-heo/oh-my-claudecode) and [oh-my-codex](https://github.com/Yeachan-Heo/oh-my-codex), `oh-my-gemini` transforms the Gemini CLI from a single-agent tool into a high-performance, multi-agent development team.
+## 💡 Origin & Motivation
 
-## 🌟 Core Philosophy
+`oh-my-gemini` was born because a Gemini-native version of powerful orchestration tools like [oh-my-claudecode (OMC)](https://github.com/yeachan-heo/oh-my-claudecode) and [oh-my-codex (OMX)](https://github.com/Yeachan-Heo/oh-my-codex) was missing. 
 
-- **Team Orchestration:** Don't work alone. Delegate specialized tasks to a team of agents (Architect, Executor, Verifier).
+Our mission is to bring that same "supercharged" multi-agent experience to the Gemini ecosystem, ensuring that Gemini users have access to the same level of persistence, team-based development, and high-performance workflows.
+
+## 🛡 The OMG Mandate (Core Principles)
+
+- **Feature Parity:** All core features of OMC and OMX serve as the baseline for OMG. While we encourage modifications and additions to leverage Gemini's unique strengths, **no base feature from OMC/OMX shall be omitted.**
+- **Justified Deviations:** If a core feature cannot be implemented due to technical limitations of the Gemini CLI, a clear technical justification must be documented.
+- **Team Orchestration:** Don't work alone. Delegate specialized tasks to a team of agents (Architect, Developer, Verifier).
 - **Persistence (The "Ralph" Mentality):** Never give up. Loop through execution and verification until the task is truly done.
-- **Deep Context:** Maintain a durable project memory that persists across sessions.
-- **Socratic Clarity:** Use deep interviewing to clarify vague requirements before writing a single line of code.
+
 
 ## 🛠 Features (Roadmap)
 
