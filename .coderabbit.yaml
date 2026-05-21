@@ -7,6 +7,6 @@ reviews:
     - main
     - dev
   # Profile setting
-  profile: CHILL
+  profile: chill
   # Language for reviews
   request_review_command: "@coderabbitai review"
