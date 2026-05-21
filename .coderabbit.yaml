@@ -6,4 +6,3 @@ reviews:
     base_branches:
       - dev
   profile: chill
-  request_review_command: "@coderabbitai review"
