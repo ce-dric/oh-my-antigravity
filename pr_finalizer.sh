@@ -1,24 +1,39 @@
 #!/bin/bash
 
-resolve_pr_conversations() {
-  PR_ID=$1
-  echo "Checking PR #$PR_ID for resolution..."
+# Configuration
+PR_IDS="1 2 3"
+SLEEP_SECONDS=300
+KEEP_RUNNING=true
+
+# Graceful shutdown handler
+trap 'KEEP_RUNNING=false; echo "Shutting down PR Finalizer..."; exit 0' SIGTERM SIGINT
+
+check_pr_approval_status() {
+  local PR_ID="$1"
+  echo "Checking PR #$PR_ID for approval status..."
   
-  # Get review threads/comments
-  # Note: gh CLI doesn't have a direct 'resolve' command for individual comments easily via ID in all versions, 
-  # but we can check if the review status is 'APPROVED' or if recent comments are positive.
+  local STATUS
+  STATUS=$(gh pr view "$PR_ID" --json reviewDecision -q .reviewDecision 2>/dev/null)
+  local EXIT_CODE=$?
   
-  STATUS=$(gh pr view $PR_ID --json reviewDecision -q .reviewDecision)
-  
-  if [[ "$STATUS" == "APPROVED" ]]; then
-    echo "PR #$PR_ID is APPROVED. Resolving (simulated via summary)..."
-    # In a real UI, we click resolve. Here we mark our internal state as ready.
+  if [ $EXIT_CODE -ne 0 ]; then
+    echo "Error fetching PR #$PR_ID"
+    return 1
   fi
+  
+  if [ "$STATUS" = "APPROVED" ]; then
+    echo "PR #$PR_ID is APPROVED."
+  fi
+  return 0
 }
 
-while true; do
-  for id in 1 2 3; do
-    resolve_pr_conversations $id
+echo "Starting PR Monitor for PRs: $PR_IDS"
+while [ "$KEEP_RUNNING" = "true" ]; do
+  for id in $PR_IDS; do
+    check_pr_approval_status "$id"
   done
-  sleep 300
+  
+  echo "Sleeping for $SLEEP_SECONDS seconds..."
+  sleep "$SLEEP_SECONDS" &
+  wait $!
 done
