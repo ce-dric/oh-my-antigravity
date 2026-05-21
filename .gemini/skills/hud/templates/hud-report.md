@@ -8,6 +8,14 @@
 | Developer | Implementer | 🔵 Running |
 | Verifier | Guardian | ⚪️ Idle |
 
+## 📊 Resource Usage
+| Metric | Count |
+| :--- | :--- |
+| **Input Tokens** | [Count] |
+| **Output Tokens** | [Count] |
+| **Total Tokens** | [Sum] |
+| **Context Used** | [%]% |
+
 ## 📈 Progress
 - [🟢] Interview Phase
 - [🟢] Research Phase
