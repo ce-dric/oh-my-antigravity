@@ -1,6 +1,7 @@
 # 📟 OMG Orchestration HUD
 
-## 🛠 Active Phase: [e.g., SPRINT]
+## 🛠 Active Phase: [e.g., IMPLEMENTATION PHASE]
+
 | Agent | Role | Status |
 | :--- | :--- | :--- |
 | **Ralph** | Manager | 🟢 Active |
@@ -9,6 +10,7 @@
 | Verifier | Guardian | ⚪️ Idle |
 
 ## 📊 Resource Usage
+
 | Metric | Count |
 | :--- | :--- |
 | **Input Tokens** | [Count] |
