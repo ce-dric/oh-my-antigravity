@@ -1,0 +1,12 @@
+# CodeRabbit Configuration
+# For more information, see https://docs.coderabbit.ai/getting-started/configure-coderabbit
+
+reviews:
+  # Enable reviews on main and dev branches
+  target_branches:
+    - main
+    - dev
+  # Profile setting
+  profile: chill
+  # Language for reviews
+  request_review_command: "@coderabbitai review"
