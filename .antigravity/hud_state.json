@@ -1,0 +1,17 @@
+{
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "total": 0,
+    "limit_reset_minutes": 0
+  },
+  "cost": {
+    "session_usd": 0.0
+  },
+  "status": {
+    "active_agent": "Gemini-CLI",
+    "phase": "SYSTEM_UPDATE",
+    "autopilot": false,
+    "last_update": "2026-05-21 17:44:50"
+  }
+}
