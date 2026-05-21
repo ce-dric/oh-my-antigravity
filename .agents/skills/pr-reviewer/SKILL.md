@@ -7,7 +7,7 @@ orchestration:
 
 # Skill: PR Reviewer
 
-This skill automates the collaboration between Gemini and CodeRabbit (or other AI reviewers) to ensure PRs reach a merge-ready state autonomously.
+This skill automates the collaboration between Antigravity and CodeRabbit (or other AI reviewers) to ensure PRs reach a merge-ready state autonomously.
 
 ## Instructions
 
