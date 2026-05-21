@@ -1,0 +1,28 @@
+{
+  "name": "oh-my-antigravity",
+  "version": "0.4.0",
+  "description": "Supercharge your Antigravity CLI with a teams-first multi-agent orchestration layer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "antigravity",
+    "cli",
+    "orchestration",
+    "multi-agent",
+    "ai",
+    "automation",
+    "oma"
+  ],
+  "author": "ce-dric",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ce-dric/oh-my-antigravity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ce-dric/oh-my-antigravity/issues"
+  },
+  "homepage": "https://github.com/ce-dric/oh-my-antigravity#readme"
+}
