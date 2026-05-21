@@ -16,7 +16,7 @@
 
 ## 3. Core Components
 
-### 3.1 Sub-agents (`.antigravity/agents/`)
+### 3.1 Sub-agents (Repository Root)
 - **ralph.md:** The "Manager". Focuses on state management, delegation, and "never-give-up" loops.
 - **architect.md:** Responsible for system design, file structure, and technical debt assessment.
 - **developer.md:** Focused on surgical code implementation and adhering to local conventions.

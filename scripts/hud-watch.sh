@@ -2,7 +2,8 @@
 # OMA HUD Monitor Script
 # Dependencies: jq
 
-STATE_FILE=".antigravity/hud_state.json"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+STATE_FILE="$SCRIPT_DIR/../.antigravity/hud_state.json"
 
 if ! command -v jq &> /dev/null; then
     echo "Error: jq is not installed. Please install it to use the HUD."

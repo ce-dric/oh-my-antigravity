@@ -19,7 +19,7 @@ This project follows the **OMA Orchestration Model**. All development must be co
 - **Language:** English for documentation, code comments, and commit messages.
 - **Commits:** Conventional Commits (e.g., `feat:`, `fix:`, `docs:`).
 - **Structure:** 
-  - Sub-agents: `.antigravity/agents/`
+  - Sub-agents: Root directory (e.g., `ralph.md`)
   - Skills: `.agents/skills/`
   - Documentation: Root `.md` files.
 

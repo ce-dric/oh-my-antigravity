@@ -14,15 +14,12 @@
 - Structure: `.antigravity/agents`, `.agents/skills`, `.antigravity.md`
 
 ## 🤖 Autopilot Session
-- **Status:** SUCCESS
-- **Goal:** Port 14 skills from external PR #3 to OMA.
-- **Current Iteration:** 3/5
-- **Current Phase:** COMPLETED
+- **Status:** ACTIVE
+- **Goal:** Address all feedback from CodeRabbitAI in PR #11.
+- **Current Iteration:** 1/5
+- **Current Phase:** RESEARCH & FIX_PLANNING
 - **Recovery Log:**
-  - Batch 1 Complete: plan, ralplan, remember, skillify.
-  - Batch 2 Complete: ai-slop-cleaner, visual-verdict, release.
-  - Batch 3 Complete: ask, cancel, hello-antigravity, sciomc, wiki, writer-memory.
-  - Final Cleanup: Legacy `.gemini` directory removed.
+  - Review points: Markdown location, Token pricing, Scaffold coverage, Version mismatch, HUD script paths.
 
 
 ## History

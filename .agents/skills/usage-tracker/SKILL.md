@@ -15,8 +15,8 @@ When activated, you must:
 
 1.  **Retrieve Stats:** Execute the `/stats model` command to get the current session's token usage.
 2.  **Calculate Costs:**
-    - Input: `$0.00035 / 1k tokens`
-    - Output: `$0.00105 / 1k tokens`
+    - Use pricing information provided in the `/stats model` output (dynamic pricing) to calculate current session costs.
+    - If prices are unavailable, use current Gemini 1.5 Pro standard rates.
 3.  **Update State:** Use `jq` to update `.antigravity/hud_state.json`:
     - `tokens.input`, `tokens.output`, `tokens.total`
     - `cost.session_usd`

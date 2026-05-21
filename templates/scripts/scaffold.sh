@@ -5,6 +5,7 @@ set -euo pipefail
 TARGET_DIR="${1:-"."}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SOURCE_DIR="$(dirname "$SCRIPT_DIR")"
+REPO_ROOT="$(dirname "$SOURCE_DIR")"
 
 echo "🚀 Initializing oh-my-antigravity (OMA) in $TARGET_DIR..."
 
@@ -15,17 +16,14 @@ if [ -d "$TARGET_DIR/.antigravity" ] || [ -d "$TARGET_DIR/.agents" ]; then
 fi
 
 # 1. Create directory structure
-mkdir -p "$TARGET_DIR/.antigravity/agents"
-mkdir -p "$TARGET_DIR/.agents/skills/deep-interview/references"
-mkdir -p "$TARGET_DIR/.agents/skills/deep-interview/templates"
+mkdir -p "$TARGET_DIR/.antigravity"
+mkdir -p "$TARGET_DIR/.agents/skills"
 
-# 2. Copy Agents
-cp "$SOURCE_DIR/agents/"*.md "$TARGET_DIR/.antigravity/agents/"
+# 2. Copy Agents to root
+cp "$SOURCE_DIR/agents/"*.md "$TARGET_DIR/"
 
-# 3. Copy Deep Interview Skill
-cp "$SOURCE_DIR/skills/deep-interview/SKILL.md" "$TARGET_DIR/.agents/skills/deep-interview/"
-cp "$SOURCE_DIR/skills/deep-interview/references/"*.md "$TARGET_DIR/.agents/skills/deep-interview/references/"
-cp "$SOURCE_DIR/skills/deep-interview/templates/"*.md "$TARGET_DIR/.agents/skills/deep-interview/templates/"
+# 3. Copy Skills
+cp -r "$REPO_ROOT/.agents/skills/"* "$TARGET_DIR/.agents/skills/"
 
 # 4. Copy Documentation Templates to root
 cp "$SOURCE_DIR/docs/GEMINI.md" "$TARGET_DIR/.antigravity.md"

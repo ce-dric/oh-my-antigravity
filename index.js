@@ -4,5 +4,5 @@
 
 module.exports = {
   name: "oh-my-antigravity",
-  version: "0.1.0"
+  version: "0.4.0"
 };
