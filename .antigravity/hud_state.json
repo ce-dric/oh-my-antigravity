@@ -1,0 +1,17 @@
+{
+  "tokens": {
+    "input": 55800,
+    "output": 3650,
+    "total": 59450,
+    "limit_reset_minutes": 10
+  },
+  "cost": {
+    "session_usd": 0.235
+  },
+  "status": {
+    "active_agent": "ralph",
+    "phase": "COMPLETED",
+    "autopilot": false,
+    "last_update": "2026-05-22 18:41:00"
+  }
+}
