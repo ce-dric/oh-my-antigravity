@@ -2,7 +2,7 @@
 name: repo-mapper
 description: A specialized skill for advanced codebase analysis, dependency mapping, and structural visualization.
 orchestration:
-  manager: Ralph
+  manager: ralph
 ---
 
 # Skill: Repo-Mapper
@@ -19,8 +19,8 @@ When activated, you must:
 4.  **Identify Bottlenecks:** Highlight areas with high circular dependency or excessive complexity.
 
 ## Resources
-- **references/patterns.md**: Common architectural patterns to look for.
-- **templates/structure-map.md**: A template for reporting the codebase structure.
+- `architectural-patterns.md`: Common architectural patterns to look for.
+- `structure-map.md`: A template for reporting the codebase structure.
 
 ## Orchestration
 This skill should be invoked by the **Architect** under the coordination of **Ralph**.

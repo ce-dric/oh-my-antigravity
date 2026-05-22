@@ -1,0 +1,23 @@
+# Task List: OMA Autopilot & HUD Enhancements
+
+- [x] **Resolve CodeRabbit Feedback**
+  - [x] Update `.antigravity.md` doc placement policy details
+  - [x] Create `.antigravity/pricing.json` database
+  - [x] Update `.agents/skills/usage-tracker/SKILL.md` pricing lookup instructions
+  - [x] Update `templates/scripts/scaffold.sh` with folder guards and overwrite checks
+  - [x] Update `scripts/hud-watch.sh` with relative path resolution, jq validation, and defaults
+  - [x] Update `index.js` version value to `"0.4.0"`
+  - [x] Update `ralph.md` and `templates/agents/ralph.md` State Management guidelines
+  - [x] Create `.agents/skills/auto-fixer/references/error-patterns.md`
+  - [x] Update `.agents/skills/deep-interview/SKILL.md` frontmatter and formatting
+  - [x] Convert `.agents/skills/deep-interview/templates/mini-prd.md` to neutral template
+  - [x] Move `repo-mapper/references/patterns.md` to root as `architectural-patterns.md` (language-aware)
+  - [x] Move `repo-mapper/templates/structure-map.md` to root as `structure-map.md`
+  - [x] Update `.agents/skills/repo-mapper/SKILL.md` links and metadata
+- [x] **Implement OMC & OMX-Inspired New Features**
+  - [x] Create `.agents/skills/ecomode/SKILL.md`
+  - [x] Create `.agents/skills/sandbox-check/SKILL.md`
+- [x] **Verification & Walkthrough**
+  - [x] Verify scaffolding behavior
+  - [x] Verify HUD watch execution
+  - [x] Generate `walkthrough.md`

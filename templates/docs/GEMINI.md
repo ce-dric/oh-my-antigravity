@@ -21,7 +21,7 @@ This project follows the **OMA Orchestration Model**. All development must be co
 - **Structure:** 
   - Sub-agents: Root directory (e.g., `ralph.md`)
   - Skills: `.agents/skills/`
-  - Documentation: Root `.md` files.
+  - Documentation: Root `.md` files (only for user-facing or project-level documentation, NOT operational/internal files such as agent specifications in the root directory, templates under `templates/`, or `SKILL.md` files under `.agents/skills/`).
 
 ## 🧠 Memory Management
 - Maintain `MEMORY.md` as the source of truth for project state and history.

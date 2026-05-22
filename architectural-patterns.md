@@ -15,4 +15,4 @@
 ## 4. Spaghetti Code (Anti-pattern)
 - Circular dependencies.
 - No clear separation of concerns.
-- Files that are too large (>500 lines).
+- Files that exceed target language/complexity standards (e.g., >500 lines for standard JS/TS files, unless they are auto-generated, markup, or configuration files). When determining if a file is too large, consider cyclomatic complexity, function length, and file responsibilities (Single Responsibility Principle) instead of strict line limits alone.

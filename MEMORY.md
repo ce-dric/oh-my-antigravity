@@ -9,20 +9,21 @@
 - Research Pointers: [External PR #3 Analysis](research/PR3_ANALYSIS.md) (Stored in private memory)
 
 ## Status
-- HUD System: Migrated to `.antigravity/`
+- HUD System: Migrated to `.antigravity/` (Success)
 - Autopilot: Ready
-- Structure: `.antigravity/agents`, `.agents/skills`, `.antigravity.md`
+- Structure: Root agents, `.agents/skills/`, `.antigravity.md` (Verified)
+- Last Status Check: 2026-05-22 18:40:00 (Diagnostic & Features Run)
 
 ## 🤖 Autopilot Session
-- **Status:** ACTIVE
-- **Goal:** Address all feedback from CodeRabbitAI in PR #11.
+- **Status:** SUCCESS
+- **Goal:** Address all feedback from CodeRabbitAI in PR #11 and implement OMC/OMX features.
 - **Current Iteration:** 1/5
-- **Current Phase:** RESEARCH & FIX_PLANNING
+- **Current Phase:** COMPLETED
 - **Recovery Log:**
-  - Review points: Markdown location, Token pricing, Scaffold coverage, Version mismatch, HUD script paths.
-
+  - All items addressed: CodeRabbit comments resolved, pricing database set up, scaffold coverage expanded, and ecomode/sandbox-check skills added.
 
 ## History
+- **2026-05-22:** Resolved all CodeRabbit PR comments on PR #11 and introduced Eco Mode (ecomode) and Sandbox Safety Checker (sandbox-check) skills based on OMC/OMX parity.
 - **2026-05-21:** Batch 3 skills (ask, cancel, hello-antigravity, sciomc, wiki, writer-memory) implemented by Developer.
 - **2026-05-21:** Batch 2 skills (ai-slop-cleaner, visual-verdict, release) implemented by Developer.
 - **2026-05-21:** Rebranded from oh-my-gemini (OMG) to oh-my-antigravity (OMA). Added migration notice to README.md regarding the June 18th Gemini CLI deadline.
