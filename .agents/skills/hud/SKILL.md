@@ -7,7 +7,32 @@ orchestration:
 
 # Skill: Orchestration HUD
 
-This skill provides a **native visual status report** using the Antigravity CLI's `update_topic` tool and synchronizes with the optional background monitor.
+The OMA HUD uses a two-layer architecture matching `oh-my-claudecode` (OMC) and `oh-my-codex` (OMX):
+
+1. **Layer 1 - Antigravity built-in statusLine**: Real-time TUI footer or status line. Configured via the `update_topic` tool to show OMA-specific orchestration state.
+2. **Layer 2 - `scripts/hud-watch.sh` command**: Live-updating terminal display reading `.antigravity/hud_state.json`.
+
+## Quick Commands
+
+| Command | Description |
+|---------|-------------|
+| `./scripts/hud-watch.sh` | Show current HUD once (modes, tokens, activity) |
+| `./scripts/hud-watch.sh --watch` | Live-updating display (polls every 2s) |
+| `./scripts/hud-watch.sh --json` | Raw state output for scripting |
+| `./scripts/hud-watch.sh --preset=minimal` | Minimal display |
+| `./scripts/hud-watch.sh --preset=focused` | Default display |
+| `./scripts/hud-watch.sh --preset=full` | All elements |
+
+## Presets
+
+### minimal
+`[OMA#0.4.0] oh-my-gemini/main | ralph:COMPLETED | tokens:59.5k`
+
+### focused (default)
+`[OMA#0.4.0] oh-my-gemini/main | ralph:COMPLETED | autopilot:false | cost:$0.235 | tokens:59.5k | reset:10m | last:5s ago`
+
+### full
+`[OMA#0.4.0] oh-my-gemini/main | ralph:COMPLETED | autopilot:false | cost:$0.235 | tokens:55.8k/3.6k (total:59.5k) | reset:10m | last:2026-05-22 18:41:00`
 
 ## Instructions
 
@@ -15,19 +40,5 @@ When activated, you must:
 
 1.  **Read Config:** Check `MEMORY.md` to ensure `HUD: ON`.
 2.  **Update State:** Update `.antigravity/hud_state.json` with the current phase and active agent using `jq`.
-3.  **Visual Update (Native):** Call the built-in `update_topic` tool. Use the **HUD Template** below for the `summary` parameter. This ensures a persistent, live dashboard experience directly within the CLI.
+3.  **Visual Update (Native):** Call the built-in `update_topic` tool. Use the **focused** single-line format as the `summary` parameter to provide a persistent statusbar directly in the CLI UI.
 4.  **Log Milestones:** Update `MEMORY.md` status section with the transition.
-
-## HUD Template
-```markdown
-┌───────────────────────────────────────────────────────────┐
-│ OMA ORCHESTRATION HUD | PHASE: {{phase}} | AGENT: {{agent}} │
-├───────────────────────┬───────────────────────────────────┤
-│ TOKENS: IN: {{in}}    │ OUT: {{out}}   │ TOTAL: {{total}} │
-│ COST: ${{cost}}       │ RESET: {{reset}}m │ AUTO: {{auto}}   │
-└───────────────────────┴───────────────────────────────────┘
-```
-*(Note: Replace placeholders with real values from .antigravity/hud_state.json)*
-
-## Orchestration
-This skill is the **official visual interface** for OMA. It is invoked by **Ralph** at every major state change.
